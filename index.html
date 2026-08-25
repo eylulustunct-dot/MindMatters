@@ -1,378 +1,569 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MindMatters</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMatters | Mental Health Literacy</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-body{
-background:#fff9fb;
-color:#333;
-line-height:1.6;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
-position:sticky;
-top:0;
-z-index:1000;
-}
+        body {
+            background: #fff9fb;
+            color: #333;
+            line-height: 1.6;
+        }
 
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
+        /* NAVIGATION */
 
-.logo img{
-width:60px;
-height:60px;
-}
+        header {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.logo h1{
-color:#d47fa6;
-font-size:1.8rem;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
+        .logo img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
 
-nav a{
-text-decoration:none;
-color:#555;
-font-weight:500;
-transition:.3s;
-}
+        .logo h1 {
+            color: #b85f89;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
 
-nav a:hover{
-color:#d47fa6;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
 
-.hero{
-min-height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:50px;
-background:linear-gradient(135deg,#ffe8f1,#fff7fa);
-}
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-.hero-content img{
-width:150px;
-margin-bottom:25px;
-}
+        nav a:hover {
+            color: #b85f89;
+        }
 
-.hero h2{
-font-size:3rem;
-color:#b85f89;
-margin-bottom:20px;
-}
+        /* HERO */
 
-.hero p{
-font-size:1.2rem;
-max-width:700px;
-margin:auto;
-color:#555;
-}
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffe8f1, #fff7fa);
+        }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#d47fa6;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:600;
-transition:.3s;
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
-.btn:hover{
-background:#b85f89;
-}
+        .hero-content img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
 
-section{
-padding:80px 10%;
-}
+        .hero h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: #a94f7c;
+            margin-bottom: 22px;
+        }
 
-.section-title{
-text-align:center;
-font-size:2.3rem;
-color:#b85f89;
-margin-bottom:50px;
-}
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
 
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #c86f99;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+        .btn:hover {
+            background: #a94f7c;
+            transform: translateY(-2px);
+        }
 
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-transition:.3s;
-}
+        /* SECTIONS */
 
-.card:hover{
-transform:translateY(-5px);
-}
+        section {
+            padding: 85px 10%;
+        }
 
-.card h3{
-color:#d47fa6;
-margin-bottom:15px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #a94f7c;
+            margin-bottom: 45px;
+        }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-text-align:center;
-}
+        .about {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.stat{
-background:#ffeaf2;
-padding:35px;
-border-radius:20px;
-}
+        .about p {
+            font-size: 1.05rem;
+            color: #555;
+        }
 
-.stat h3{
-font-size:2.5rem;
-color:#b85f89;
-}
+        /* CARDS */
 
-.get-involved{
-text-align:center;
-background:#ffe8f1;
-border-radius:30px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
 
-footer{
-background:#b85f89;
-color:white;
-text-align:center;
-padding:40px;
-}
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
 
-footer a{
-color:white;
-text-decoration:none;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+        }
 
-@media(max-width:768px){
-nav ul{
-display:none;
-}
+        .card h3 {
+            color: #c86f99;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
 
-.hero h2{
-font-size:2.2rem;
-}
-}
-</style>
+        .card p {
+            color: #666;
+        }
+
+        /* STATISTICS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat {
+            background: #ffeaf2;
+            padding: 35px 20px;
+            border-radius: 20px;
+        }
+
+        .stat h3 {
+            font-size: 2.3rem;
+            color: #a94f7c;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            color: #555;
+        }
+
+        /* GET INVOLVED */
+
+        .get-involved {
+            text-align: center;
+            background: #ffe8f1;
+            border-radius: 30px;
+            padding: 60px 30px;
+        }
+
+        .get-involved .section-title {
+            margin-bottom: 20px;
+        }
+
+        .get-involved p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* CONTACT */
+
+        #contact {
+            background: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #a94f7c;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            opacity: 0.95;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo h1 {
+                font-size: 1.4rem;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero-content img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hero h2 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-<img src="logo.png" alt="MindMatters Logo">
-<h1>MindMatters</h1>
-</div>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="MindMatters Logo">
+            <h1>MindMatters</h1>
+        </div>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#events">Events</a></li>
-<li><a href="#involved">Get Involved</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-<div class="hero-content">
-<img src="logo.png" alt="MindMatters Logo">
-<h2>Promoting Mental Health Literacy</h2>
-<p>
-Empowering students and communities through education,
-awareness, advocacy, and accessible mental health resources.
-</p>
-<a href="#about" class="btn">Learn More</a>
-</div>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
 
-<section id="about">
-<h2 class="section-title">About Us</h2>
+            <img src="logo.png" alt="MindMatters Logo">
 
-<div class="about">
-<p>
-MindMatters is a youth-led initiative dedicated to improving
-mental health literacy, reducing stigma, and helping young people
-access trustworthy mental health information. Through educational
-content, community outreach, events, and resources, we aim to
-create a world where mental health is understood and supported.
-</p>
-</div>
-</section>
+            <h2>Promoting Mental Health Literacy</h2>
 
-<section>
-<h2 class="section-title">Why Mental Health Matters</h2>
+            <p>
+                Empowering students and communities through education,
+                awareness, advocacy, and accessible mental health resources.
+            </p>
 
-<div class="cards">
-<div class="card">
-<h3>Education</h3>
-<p>Learn accurate and evidence-based information about mental health.</p>
-</div>
+            <a href="#about" class="btn">Learn More</a>
 
-<div class="card">
-<h3>Awareness</h3>
-<p>Reduce stigma through conversation and understanding.</p>
-</div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>Support</h3>
-<p>Connect people with reliable resources and guidance.</p>
-</div>
+    <!-- ABOUT -->
+    <section id="about">
 
-<div class="card">
-<h3>Growth</h3>
-<p>Build resilience, confidence, and emotional well-being.</p>
-</div>
-</div>
-</section>
+        <h2 class="section-title">About Us</h2>
 
-<section>
-<h2 class="section-title">Mental Health Statistics</h2>
+        <div class="about">
+            <p>
+                MindMatters is a youth-led initiative dedicated to improving
+                mental health literacy, reducing stigma, and helping young people
+                access trustworthy mental health information. Through educational
+                content, community outreach, events, and resources, we aim to
+                create a world where mental health is understood and supported.
+            </p>
+        </div>
 
-<div class="stats">
+    </section>
 
-<div class="stat">
-<h3>1 in 5</h3>
-<p>U.S. adults experience mental illness each year.</p>
-</div>
+    <!-- WHY MENTAL HEALTH MATTERS -->
+    <section>
 
-<div class="stat">
-<h3>50%</h3>
-<p>Many mental health conditions begin before age 14.</p>
-</div>
+        <h2 class="section-title">Why Mental Health Matters</h2>
 
-<div class="stat">
-<h3>Early Help</h3>
-<p>Early support can significantly improve outcomes.</p>
-</div>
+        <div class="cards">
 
-</div>
-</section>
+            <div class="card">
+                <h3>Education</h3>
+                <p>
+                    Learn accurate and evidence-based information about mental health.
+                </p>
+            </div>
 
-<section id="resources">
-<h2 class="section-title">Resources</h2>
+            <div class="card">
+                <h3>Awareness</h3>
+                <p>
+                    Reduce stigma through conversation, understanding, and education.
+                </p>
+            </div>
 
-<div class="cards">
+            <div class="card">
+                <h3>Support</h3>
+                <p>
+                    Connect people with reliable resources and guidance.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Anxiety Resources</h3>
-<p>Guides, coping strategies, and support resources.</p>
-</div>
+            <div class="card">
+                <h3>Growth</h3>
+                <p>
+                    Build knowledge, confidence, and healthy coping skills.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Stress Management</h3>
-<p>Tools and techniques for everyday well-being.</p>
-</div>
+        </div>
 
-<div class="card">
-<h3>Student Wellness</h3>
-<p>Resources specifically designed for students.</p>
-</div>
+    </section>
 
-<div class="card">
-<h3>Crisis Support</h3>
-<p>Important support services and emergency resources.</p>
-</div>
+    <!-- STATISTICS -->
+    <section>
 
-</div>
-</section>
+        <h2 class="section-title">Mental Health Matters</h2>
 
-<section id="events">
-<h2 class="section-title">Events</h2>
+        <div class="stats">
 
-<div class="cards">
+            <div class="stat">
+                <h3>1 in 5</h3>
+                <p>
+                    Many people experience a mental health condition each year.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Workshops</h3>
-<p>Interactive mental health education sessions.</p>
-</div>
+            <div class="stat">
+                <h3>Early Support</h3>
+                <p>
+                    Recognizing concerns early can help people find support sooner.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Awareness Campaigns</h3>
-<p>Community initiatives promoting understanding.</p>
-</div>
+            <div class="stat">
+                <h3>You're Not Alone</h3>
+                <p>
+                    Learning about mental health can help reduce stigma and encourage
+                    people to seek appropriate support.
+                </p>
+            </div>
 
-<div class="card">
-<h3>Community Outreach</h3>
-<p>Programs designed to reach and support local communities.</p>
-</div>
+        </div>
 
-</div>
-</section>
+    </section>
 
-<section id="involved">
-<div class="get-involved">
-<h2 class="section-title">Get Involved</h2>
+    <!-- RESOURCES -->
+    <section id="resources">
 
-<p>
-Join our mission to make mental health education accessible
-for everyone.
-</p>
+        <h2 class="section-title">Resources</h2>
 
-<a href="#contact" class="btn">Join MindMatters</a>
-</div>
-</section>
+        <div class="cards">
 
-<section id="contact">
-<h2 class="section-title">Contact Us</h2>
+            <div class="card">
+                <h3>Anxiety Resources</h3>
+                <p>
+                    Learn about anxiety and explore trustworthy information and
+                    support options.
+                </p>
+            </div>
 
-<div class="about">
-<p>Email: info@mindmatters.org</p>
-<p>Instagram: @mindmatters_612</p>
-</div>
-</section>
+            <div class="card">
+                <h3>Stress Management</h3>
+                <p>
+                    Explore healthy strategies for managing everyday stress.
+                </p>
+            </div>
 
-<footer>
-<h3>MindMatters</h3>
-<p>Promoting Mental Health Literacy & Awareness</p>
-<br>
-<p>© 2026 MindMatters. All Rights Reserved.</p>
-</footer>
+            <div class="card">
+                <h3>Student Wellness</h3>
+                <p>
+                    Mental health information and resources designed with students
+                    in mind.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Crisis Support</h3>
+                <p>
+                    Find information about professional and emergency support
+                    resources when they are needed.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events">
+
+        <h2 class="section-title">Events</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Workshops</h3>
+                <p>
+                    Interactive mental health education sessions for students
+                    and communities.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Awareness Campaigns</h3>
+                <p>
+                    Community initiatives designed to promote mental health
+                    understanding and awareness.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Community Outreach</h3>
+                <p>
+                    Programs designed to share reliable mental health information
+                    with local communities.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section id="involved">
+
+        <div class="get-involved">
+
+            <h2 class="section-title">Get Involved</h2>
+
+            <p>
+                Join our mission to make mental health education more accessible
+                and understandable for everyone.
+            </p>
+
+            <a href="#contact" class="btn">Join MindMatters</a>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="about">
+
+            <p>
+                Email: info@mindmatters.org
+            </p>
+
+            <p>
+                Instagram: @mindmatters_612
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>MindMatters</h3>
+
+        <p>
+            Promoting Mental Health Literacy & Awareness
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 MindMatters. All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
-```
