@@ -1,0 +1,379 @@
+# MindMatters
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindMatters</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fff9fb;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+}
+
+.logo h1{
+color:#d47fa6;
+font-size:1.8rem;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#555;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d47fa6;
+}
+
+.hero{
+min-height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px;
+background:linear-gradient(135deg,#ffe8f1,#fff7fa);
+}
+
+.hero-content img{
+width:150px;
+margin-bottom:25px;
+}
+
+.hero h2{
+font-size:3rem;
+color:#b85f89;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+color:#555;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#d47fa6;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#b85f89;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.3rem;
+color:#b85f89;
+margin-bottom:50px;
+}
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#d47fa6;
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+text-align:center;
+}
+
+.stat{
+background:#ffeaf2;
+padding:35px;
+border-radius:20px;
+}
+
+.stat h3{
+font-size:2.5rem;
+color:#b85f89;
+}
+
+.get-involved{
+text-align:center;
+background:#ffe8f1;
+border-radius:30px;
+}
+
+footer{
+background:#b85f89;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+nav ul{
+display:none;
+}
+
+.hero h2{
+font-size:2.2rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png" alt="MindMatters Logo">
+<h1>MindMatters</h1>
+</div>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#involved">Get Involved</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<img src="logo.png" alt="MindMatters Logo">
+<h2>Promoting Mental Health Literacy</h2>
+<p>
+Empowering students and communities through education,
+awareness, advocacy, and accessible mental health resources.
+</p>
+<a href="#about" class="btn">Learn More</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+<p>
+MindMatters is a youth-led initiative dedicated to improving
+mental health literacy, reducing stigma, and helping young people
+access trustworthy mental health information. Through educational
+content, community outreach, events, and resources, we aim to
+create a world where mental health is understood and supported.
+</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Why Mental Health Matters</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Education</h3>
+<p>Learn accurate and evidence-based information about mental health.</p>
+</div>
+
+<div class="card">
+<h3>Awareness</h3>
+<p>Reduce stigma through conversation and understanding.</p>
+</div>
+
+<div class="card">
+<h3>Support</h3>
+<p>Connect people with reliable resources and guidance.</p>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<p>Build resilience, confidence, and emotional well-being.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Mental Health Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>1 in 5</h3>
+<p>U.S. adults experience mental illness each year.</p>
+</div>
+
+<div class="stat">
+<h3>50%</h3>
+<p>Many mental health conditions begin before age 14.</p>
+</div>
+
+<div class="stat">
+<h3>Early Help</h3>
+<p>Early support can significantly improve outcomes.</p>
+</div>
+
+</div>
+</section>
+
+<section id="resources">
+<h2 class="section-title">Resources</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Anxiety Resources</h3>
+<p>Guides, coping strategies, and support resources.</p>
+</div>
+
+<div class="card">
+<h3>Stress Management</h3>
+<p>Tools and techniques for everyday well-being.</p>
+</div>
+
+<div class="card">
+<h3>Student Wellness</h3>
+<p>Resources specifically designed for students.</p>
+</div>
+
+<div class="card">
+<h3>Crisis Support</h3>
+<p>Important support services and emergency resources.</p>
+</div>
+
+</div>
+</section>
+
+<section id="events">
+<h2 class="section-title">Events</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Workshops</h3>
+<p>Interactive mental health education sessions.</p>
+</div>
+
+<div class="card">
+<h3>Awareness Campaigns</h3>
+<p>Community initiatives promoting understanding.</p>
+</div>
+
+<div class="card">
+<h3>Community Outreach</h3>
+<p>Programs designed to reach and support local communities.</p>
+</div>
+
+</div>
+</section>
+
+<section id="involved">
+<div class="get-involved">
+<h2 class="section-title">Get Involved</h2>
+
+<p>
+Join our mission to make mental health education accessible
+for everyone.
+</p>
+
+<a href="#contact" class="btn">Join MindMatters</a>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="about">
+<p>Email: info@mindmatters.org</p>
+<p>Instagram: @mindmatters_612</p>
+</div>
+</section>
+
+<footer>
+<h3>MindMatters</h3>
+<p>Promoting Mental Health Literacy & Awareness</p>
+<br>
+<p>© 2026 MindMatters. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
